@@ -1,0 +1,162 @@
+<!-- Lisa -->
+<!DOCTYPE airframe SYSTEM "airframe.dtd">
+<airframe name="lisa">
+	<servos>
+		<servo name="MOTOR"         no="0" min="1290" neutral="1290" max="1810"/>
+		<servo name="AILEVON_LEFT"  no="1" min="2000" neutral="1510" max="1000"/>
+		<servo name="AILEVON_RIGHT" no="3" min="1000" neutral="1535" max="2000"/>
+	</servos>
+
+	<commands>
+		<axis name="THROTTLE" failsafe_value="0"/>
+		<axis name="ROLL"     failsafe_value="0"/>
+		<axis name="PITCH"    failsafe_value="0"/>
+		<axis name="SHUTTER"    failsafe_value="0"/>
+	</commands>
+
+	<rc_commands>
+		<set command="THROTTLE" value="@THROTTLE"/>
+		<set command="ROLL"     value="@ROLL"/>
+		<set command="PITCH"    value="@PITCH"/>
+	</rc_commands>
+
+	<!-- TODO: ?? -->
+	<section name="MIXER">
+		<define name="AILEVON_AILERON_RATE" value="0.75"/>
+		<define name="AILEVON_ELEVATOR_RATE" value="0.75"/>
+	</section>
+
+	<!-- TODO: ?? -->
+	<command_laws>
+		<let var="aileron"  value="@ROLL  * AILEVON_AILERON_RATE"/>
+		<let var="elevator" value="@PITCH * AILEVON_ELEVATOR_RATE"/>
+		<set servo="MOTOR"         value="@THROTTLE"/>
+		<set servo="AILEVON_LEFT"  value="$elevator - $aileron"/>
+		<set servo="AILEVON_RIGHT" value="$elevator + $aileron"/>
+	</command_laws>
+
+	<section name="AUTO1" prefix="AUTO1_">
+		<define name="MAX_ROLL" value="0.7"/>
+		<define name="MAX_PITCH" value="0.6"/>
+	</section>
+
+	<section name="IMU" prefix="IMU_">
+		<define name="BODY_TO_IMU_PHI" value="184." unit="deg"/>
+		<define name="BODY_TO_IMU_THETA" value="3." unit="deg"/>
+		<define name="BODY_TO_IMU_PSI" value="-90." unit="deg"/>
+
+		<define name="ACCEL_X_NEUTRAL" value="0"/>
+		<define name="ACCEL_Y_NEUTRAL" value="0"/>
+		<define name="ACCEL_Z_NEUTRAL" value="0"/>
+
+		<!-- MAGNETO CALIBRATION DELFT -->
+		<define name="MAG_X_NEUTRAL" value="286"/>
+		<define name="MAG_Y_NEUTRAL" value="-72"/>
+		<define name="MAG_Z_NEUTRAL" value="97"/>
+		<define name="MAG_X_SENS" value="3.94431833863" integer="16"/>
+		<define name="MAG_Y_SENS" value="4.14629702271" integer="16"/>
+		<define name="MAG_Z_SENS" value="4.54518768636" integer="16"/>
+
+		<!-- MAGNETO CURRENT CALIBRATION -->
+		<define name="MAG_X_CURRENT_COEF" value="0.0103422023767"/>
+		<define name="MAG_Y_CURRENT_COEF" value="0.0084568317783"/>
+		<define name="MAG_Z_CURRENT_COEF" value="-0.01935617335"/>
+	</section>
+
+	<!-- TODO: Configure ?? -->
+	<section name="BAT">
+		<define name="MILLIAMP_AT_FULL_THROTTLE" value="14000"/>
+		<define name="CATASTROPHIC_BAT_LEVEL" value="4.0" unit="V"/>
+		<define name="CRITIC_BAT_LEVEL" value="4.4" unit="V"/>
+		<define name="LOW_BAT_LEVEL" value="4.5" unit="V"/>
+		<define name="MAX_BAT_LEVEL" value="4.8" unit="V"/>
+	</section>
+
+	<!-- TODO: Configure ?? -->
+	  <section name="MISC">
+		<define name="NOMINAL_AIRSPEED" value="13." unit="m/s"/>
+		<define name="CARROT" value="5." unit="s"/>
+		<define name="KILL_MODE_DISTANCE" value="(1.5*MAX_DIST_FROM_HOME)"/>
+		<define name="DEFAULT_CIRCLE_RADIUS" value="80."/>
+	</section>
+
+	<!-- TODO: ?? -->
+	<section name="VERTICAL CONTROL" prefix="V_CTL_">
+		<define name="POWER_CTL_BAT_NOMINAL" value="11.1" unit="volt"/>
+		<!-- outer loop proportional gain -->
+		<define name="ALTITUDE_PGAIN" value="0.03"/>
+		<!-- outer loop saturation -->
+		<define name="ALTITUDE_MAX_CLIMB" value="2."/>
+
+		<!-- auto throttle inner loop -->
+		<define name="AUTO_THROTTLE_NOMINAL_CRUISE_THROTTLE" value="0.32"/>
+		<define name="AUTO_THROTTLE_MIN_CRUISE_THROTTLE" value="0.25"/>
+		<define name="AUTO_THROTTLE_MAX_CRUISE_THROTTLE" value="0.65"/>
+		<define name="AUTO_THROTTLE_LOITER_TRIM" value="1500"/>
+		<define name="AUTO_THROTTLE_DASH_TRIM" value="-4000"/>
+		<define name="AUTO_THROTTLE_CLIMB_THROTTLE_INCREMENT" value="0.15" unit="%/(m/s)"/>
+		<define name="AUTO_THROTTLE_PGAIN" value="0.01"/>
+		<define name="AUTO_THROTTLE_IGAIN" value="0.1"/>
+		<define name="AUTO_THROTTLE_PITCH_OF_VZ_PGAIN" value="0.05"/>
+
+		<define name="THROTTLE_SLEW_LIMITER" value="2" unit="s"/>
+	</section>
+
+	<!-- TODO: ?? -->
+	<section name="HORIZONTAL CONTROL" prefix="H_CTL_">
+		<define name="COURSE_PGAIN" value="1.0"/>
+		<define name="COURSE_DGAIN" value="0.3"/>
+
+		<define name="ROLL_MAX_SETPOINT" value="0.6" unit="rad"/>
+		<define name="PITCH_MAX_SETPOINT" value="0.5" unit="rad"/>
+		<define name="PITCH_MIN_SETPOINT" value="-0.5" unit="rad"/>
+
+		<define name="PITCH_PGAIN" value="12000."/>
+		<define name="PITCH_DGAIN" value="1.5"/>
+
+		<define name="ELEVATOR_OF_ROLL" value="1250"/>
+
+		<define name="ROLL_SLEW" value="0.1"/>
+
+		<define name="ROLL_ATTITUDE_GAIN" value="7500"/>
+		<define name="ROLL_RATE_GAIN" value="1500"/>
+	</section>
+
+	<firmware name="fixedwing">
+		<target name="ap" board="lisa_s_1.0">
+			<subsystem name="radio_control" type="superbitrf_rc">
+			<!-- To store the binding parameters for the superbit radio in your
+			     airframe file uncomment the following three lines and set the
+			     correct values based on the output of the superbitrf telemetry
+			     messages. -->
+			<!--define name="RADIO_TRANSMITTER_ID" value="1335259868"/--> <!-- Esden (1BitSquared) Dx6i: TX 1 -->
+			<!--define name="RADIO_TRANSMITTER_CHAN" value="6"/-->
+			<!--define name="RADIO_TRANSMITTER_PROTOCOL" value="0x01"/-->
+			<define name="USE_PERSISTENT_SETTINGS" value="TRUE"/>
+			</subsystem>
+
+			<configure name="AHRS_PROPAGATE_FREQUENCY" value="500"/>
+		</target>
+
+		<!-- TODO: ??
+		<target name="nps" board="pc">
+			<subsystem name="fdm" type="jsbsim"/>
+			<subsystem name="radio_control" type="ppm"/>
+		</target>
+		-->
+
+		<subsystem name="motor_mixing"/>
+		<subsystem name="actuators" type="pwm">
+			<define name="SERVO_HZ" value="400"/>
+			<define name="USE_SERVOS_1AND2"/>
+		</subsystem>
+
+		<subsystem name="telemetry" type="superbitrf"/>
+		<subsystem name="imu" type="lisa_s_v1.0"/>
+		<subsystem name="gps" type="ublox"/>
+		<subsystem name="stabilization" type="int_quat"/>
+		<subsystem name="ahrs" type="int_cmpl_quat"/>
+		<subsystem name="navigation"/>
+		<subsystem name="ins"/>
+		</firmware>
+</airframe>

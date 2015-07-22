@@ -1,0 +1,1039 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"st",
+				"String	string, error ƒ"
+			],
+			[
+				"e",
+				"Execute	error ƒ"
+			],
+			[
+				"va",
+				"Validate	error ƒ"
+			],
+			[
+				"Getmailuser",
+				"GetMailUsersEmail	string, error ƒ"
+			],
+			[
+				"GetMailUsersEm",
+				"GetMailUsersEmails	[]string, error ƒ"
+			],
+			[
+				"string",
+				"String	string, error ƒ"
+			],
+			[
+				"strin",
+				"Strings	[]string, error ƒ"
+			],
+			[
+				"str",
+				"Strings	[]string, error ƒ"
+			],
+			[
+				"Fat",
+				"Fatal	 ƒ"
+			],
+			[
+				"re",
+				"ReadFile	[]byte, error ƒ"
+			],
+			[
+				"mail",
+				"mail	struct ʈ"
+			],
+			[
+				"new",
+				"NewMailgun	mailgun.Mailgun ƒ"
+			],
+			[
+				"response",
+				"ResponseWriter	interface ¡"
+			],
+			[
+				"getlocat",
+				"GetLocationName	string, error ƒ"
+			],
+			[
+				"getlo",
+				"GetLocation	error ƒ"
+			],
+			[
+				"commen",
+				"comment	*data.Comment ν"
+			],
+			[
+				"comment",
+				"commentBump	error ƒ"
+			],
+			[
+				"bad",
+				"StatusBadRequest	 Ɩ"
+			],
+			[
+				"jo",
+				"JsonEnc	error ƒ"
+			],
+			[
+				"user",
+				"UserID	string ν"
+			],
+			[
+				"f",
+				"OpenFile	file *os.File, err error ƒ"
+			],
+			[
+				"fi",
+				"FileServer	http.Handler ƒ"
+			],
+			[
+				"in",
+				"Int64	int64, error ƒ"
+			],
+			[
+				"getuserac",
+				"GetUserActionsScore	[]string, error ƒ"
+			],
+			[
+				"p",
+				"Println	n int, err error ƒ"
+			],
+			[
+				"getfee",
+				"GetCommentFeed	[]data.Comment, error ƒ"
+			],
+			[
+				"keyact",
+				"keyUserActions	string ƒ"
+			],
+			[
+				"keycome",
+				"keyPostCommentIDs	string ƒ"
+			],
+			[
+				"keycom",
+				"keyPostComments	string ƒ"
+			],
+			[
+				"par",
+				"ParseUser	error ƒ"
+			],
+			[
+				"sub",
+				"subPost	error ƒ"
+			],
+			[
+				"Post",
+				"PostID	string ν"
+			],
+			[
+				"post",
+				"POST_HEARTS	 Ɩ"
+			],
+			[
+				"ope",
+				"OpenFile	file *os.File, err error ƒ"
+			],
+			[
+				"fla",
+				"BoolFlag	struct ʈ"
+			],
+			[
+				"getlco",
+				"GetLocationPosts	[]data.Post, error ƒ"
+			],
+			[
+				"getloc",
+				"GetLocationPosts	[]data.Post, error ƒ"
+			],
+			[
+				"loca",
+				"Location	string ν"
+			],
+			[
+				"Loc",
+				"LOCATION	 Ɩ"
+			],
+			[
+				"ser",
+				"ServeFile	 ƒ"
+			],
+			[
+				"l",
+				"l	*data.Location ν"
+			],
+			[
+				"node",
+				"nodeID	string ν"
+			],
+			[
+				"tmpl",
+				"tmpls	*template.Template ν"
+			],
+			[
+				"lo",
+				"log	 package ρ"
+			],
+			[
+				"pos",
+				"POST	 Ɩ"
+			],
+			[
+				"po",
+				"POST	 Ɩ"
+			],
+			[
+				"get",
+				"GenPostID	string, error ƒ"
+			],
+			[
+				"max",
+				"MAX_FILE	 Ɩ"
+			],
+			[
+				"im",
+				"image	error ƒ"
+			],
+			[
+				"MAX",
+				"MAX_IMAGE	 Ɩ"
+			],
+			[
+				"log",
+				"login	error ƒ"
+			],
+			[
+				"co",
+				"CookieSession	string ƒ"
+			],
+			[
+				"USER",
+				"USER	 Ɩ"
+			],
+			[
+				"un",
+				"StatusUnauthorized	 Ɩ"
+			],
+			[
+				"User",
+				"UserPW	string ν"
+			],
+			[
+				"use",
+				"USER_SESSION	 Ɩ"
+			],
+			[
+				"R",
+				"R_ADDR	 Ɩ"
+			],
+			[
+				"redis",
+				"redis	 package ρ"
+			],
+			[
+				"red",
+				"redisPool	*redis.Pool ν"
+			],
+			[
+				"statusbad",
+				"StatusBadRequest	 Ɩ"
+			],
+			[
+				"json",
+				"JsonEnc	error ƒ"
+			],
+			[
+				"respons",
+				"ResponseWriter	interface ¡"
+			],
+			[
+				"que",
+				"QueryRow	*sql.Row ƒ"
+			],
+			[
+				"qu",
+				"Query	*sql.Rows, error ƒ"
+			],
+			[
+				"db",
+				"DB	*sql.DB ν"
+			],
+			[
+				"ad",
+				"AddTableWithName	*gorp.TableMap ƒ"
+			],
+			[
+				"respon",
+				"ResponseWriter	interface ¡"
+			],
+			[
+				"print",
+				"Println	 ƒ"
+			],
+			[
+				"Print",
+				"Println	 ƒ"
+			],
+			[
+				"pin",
+				"Println	 ƒ"
+			],
+			[
+				"list",
+				"ListenAndServeTLS	error ƒ"
+			],
+			[
+				"ha",
+				"Handle	 ƒ"
+			],
+			[
+				"exe",
+				"ExecuteTemplate	error ƒ"
+			],
+			[
+				"Cre",
+				"CreateExpression	 ƒ"
+			],
+			[
+				"Crea",
+				"CreateRoute	mailgun.Route, error ƒ"
+			],
+			[
+				"func",
+				"func	Function"
+			],
+			[
+				"mai",
+				"mailgun	 package ρ"
+			],
+			[
+				"Sp",
+				"Sprintf	string ƒ"
+			],
+			[
+				"prin",
+				"Println	 ƒ"
+			],
+			[
+				"sp",
+				"Sprintf	string ƒ"
+			],
+			[
+				"no",
+				"Notification	struct ʈ"
+			],
+			[
+				"a",
+				"Agent	string ν"
+			],
+			[
+				"keys",
+				"keyExist	bool, string ƒ"
+			],
+			[
+				"pathfl",
+				"pathFlaggedUsers	 Ɩ"
+			],
+			[
+				"s",
+				"Strings	[]string, error ƒ"
+			],
+			[
+				"pat",
+				"Path	string ƒ"
+			],
+			[
+				"upd",
+				"updatePosts	[]Post, error ƒ"
+			],
+			[
+				"g",
+				"Get	redis.Conn ƒ"
+			],
+			[
+				"pa",
+				"Path	string ƒ"
+			],
+			[
+				"Location",
+				"Locations	[]string ν"
+			],
+			[
+				"Loca",
+				"Locations	[]string ν"
+			],
+			[
+				"req",
+				"REQTYPE	error ƒ"
+			],
+			[
+				"con",
+				"CONTINUE	bool ƒ"
+			],
+			[
+				"cooki",
+				"CookieJar	interface ¡"
+			],
+			[
+				"writ",
+				"WriteHeader	 ƒ"
+			],
+			[
+				"Come",
+				"CommentIDs	[]string ν"
+			],
+			[
+				"comm",
+				"CommentIDs	[]string ν"
+			],
+			[
+				"w",
+				"WriteHeader	 ƒ"
+			],
+			[
+				"Lcoa",
+				"LocationIDs	[]string ν"
+			],
+			[
+				"P",
+				"Path	string ƒ"
+			],
+			[
+				"locat",
+				"LocationIDs	 ν"
+			],
+			[
+				"fil",
+				"FilterStore	struct ʈ"
+			],
+			[
+				"Fil",
+				"FilterStore	struct ʈ"
+			],
+			[
+				"Pos",
+				"PostIDs	[]string ν"
+			],
+			[
+				"getse",
+				"GetSessionUser	string, error ƒ"
+			],
+			[
+				"N",
+				"NewComment	*database.Comment ƒ"
+			],
+			[
+				"setuse",
+				"SetUserAgent	error ƒ"
+			],
+			[
+				"ge",
+				"GeoLocate	string, error ƒ"
+			],
+			[
+				"geo",
+				"GeoLocate	string, error ƒ"
+			],
+			[
+				"toke",
+				"SetServiceToken	error ƒ"
+			],
+			[
+				"com",
+				"CommentIDs	[]string ν"
+			],
+			[
+				"Comme",
+				"CommentIDs	[]string ν"
+			],
+			[
+				"Com",
+				"CommentIDs	[]string ν"
+			],
+			[
+				"getusrin",
+				"GetUserInteractionsScore	[]string, error ƒ"
+			],
+			[
+				"getuser",
+				"GetUserAgent	string, error ƒ"
+			],
+			[
+				"Filter",
+				"FilterStore	struct ʈ"
+			],
+			[
+				"setlo",
+				"SetUserLocation	error ƒ"
+			],
+			[
+				"scan",
+				"ScanStruct	error ƒ"
+			],
+			[
+				"data",
+				"DataBase	struct ʈ"
+			],
+			[
+				"se",
+				"SetOutput	 ƒ"
+			],
+			[
+				"F",
+				"Filter	struct ʈ"
+			],
+			[
+				"imp",
+				"import	import (...) ʂ"
+			],
+			[
+				"Filt",
+				"FilterStore	struct ʈ"
+			],
+			[
+				"fb",
+				"fbufs	[]fbuf ν"
+			],
+			[
+				"op",
+				"OpenMap	struct ʈ"
+			],
+			[
+				"u",
+				"URL	*url.URL ν"
+			],
+			[
+				"getpos",
+				"GetPosts	[]*data.Post, error ƒ"
+			],
+			[
+				"GetUserLoc",
+				"GetUserLocationID	string, error ƒ"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "conf/airframes/lisa.xml",
+			"settings":
+			{
+				"buffer_size": 2647,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 87.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"tools",
+				"LaTeXTools: Reconfigure and migrate settings"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: List Packages"
+			],
+			[
+				"package re",
+				"Package Control: Remove Package"
+			],
+			[
+				"pack list",
+				"Package Control: List Packages"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read()) ",
+			" import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read()) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/edward/go/src/github.com/afking/gocone/web/web.go",
+		"/Users/edward/go/src/github.com/afking/gocone/web/stats.go",
+		"/Users/edward/go/src/github.com/afking/gocone/stats/stats.go",
+		"/Users/edward/go/src/github.com/afking/gocone/mg/actions.go",
+		"/Users/edward/go/src/github.com/afking/gocone/mg/tasks.go",
+		"/Users/edward/go/src/github.com/afking/gocone/rocket/gocone/rootfs/static/mail/support.tmpl",
+		"/Users/edward/go/src/github.com/afking/gocone/db/keys.go",
+		"/Users/edward/go/src/github.com/afking/gocone/db/redis.go",
+		"/Users/edward/go/src/github.com/afking/gocone/db/mail.go",
+		"/Users/edward/go/src/github.com/afking/gocone/mg/routes.go",
+		"/Users/edward/go/src/github.com/afking/gocone/mg/mail.go",
+		"/Users/edward/go/src/github.com/afking/gocone/main.go",
+		"/Users/edward/go/src/github.com/afking/gocone/api/feed.go",
+		"/Users/edward/go/src/github.com/afking/gocone/api/miscellaneous.go",
+		"/Users/edward/go/src/github.com/afking/gocone/api/comment.go",
+		"/Users/edward/go/src/github.com/afking/gocone/db/db.go",
+		"/Users/edward/go/src/github.com/afking/gocone/api/stats.go",
+		"/Users/edward/go/src/github.com/afking/gocone/db/posts.go",
+		"/Users/edward/go/src/github.com/afking/gocone/data/post.go",
+		"/Users/edward/go/src/github.com/afking/gocone/notify/notify.go",
+		"/Users/edward/go/src/github.com/afking/gocone/api/post.go",
+		"/Users/edward/go/src/github.com/afking/gocone/api/api.go",
+		"/Users/edward/go/src/github.com/afking/gocone/db/feed.go",
+		"/Users/edward/go/src/github.com/afking/gocone/bot/cpu/cpu.go",
+		"/Users/edward/go/src/github.com/afking/gocone/api/user.go",
+		"/Users/edward/go/src/github.com/afking/gocone/bot/bot.go",
+		"/Users/edward/go/src/github.com/afking/gocone/appdata/parse.go",
+		"/Users/edward/go/src/github.com/afking/gocone/api/heart.go",
+		"/Users/edward/go/src/github.com/afking/gocone/api/login.go",
+		"/Users/edward/go/src/github.com/afking/gocone/api/serve.go",
+		"/Users/edward/go/src/github.com/afking/gocone/api/actions.go",
+		"/Users/edward/go/src/github.com/afking/gocone/db/stats.go",
+		"/Users/edward/go/src/github.com/afking/gocone/geocone/node.go",
+		"/Users/edward/go/src/github.com/afking/gocone/data/miscellaneous.go",
+		"/Users/edward/go/src/github.com/afking/gocone/api/sub.go",
+		"/Users/edward/go/src/github.com/afking/gocone/openmap/openmap.go",
+		"/Users/edward/go/src/github.com/afking/gocone/op/op.go",
+		"/Users/edward/go/src/github.com/afking/gocone/api/services.go",
+		"/Users/edward/go/src/github.com/afking/gocone/db/pgsql.go",
+		"/Users/edward/go/src/github.com/afking/gocone/db/data.go",
+		"/Users/edward/go/src/github.com/afking/gocone/rocket/gocone/rootfs/static/html/terms.html",
+		"/Users/edward/go/src/github.com/afking/gocone/rocket/gocone/rootfs/static/html/support.html",
+		"/Users/edward/go/src/github.com/afking/gocone/rocket/gocone/rootfs/static/html/index.html",
+		"/Users/edward/go/src/github.com/afking/gocone/rocket/gocone/rootfs/static/html/404.html",
+		"/Users/edward/go/src/github.com/afking/gocone/rocket/gocone/rootfs/static/html/guideline.html",
+		"/Users/edward/go/src/github.com/afking/gocone/rocket/gocone/rootfs/static/html/about.html",
+		"/Users/edward/go/src/github.com/afking/gocone/rocket/gocone/rootfs/static/html/contact.html",
+		"/Users/edward/go/src/github.com/afking/gocone/build.sh",
+		"/Users/edward/go/src/github.com/afking/gocone/launch.sh",
+		"/Users/edward/go/src/github.com/afking/gocone/ship.sh",
+		"/Users/edward/go/src/github.com/afking/gocone/appdata/cache.go",
+		"/Users/edward/go/src/github.com/afking/gocone/db/queries.go",
+		"/Users/edward/go/src/github.com/afking/gocone/auth/auth.go",
+		"/Users/edward/go/src/github.com/afking/gocone/rocket/gocone.service",
+		"/Users/edward/Desktop/cpld.sh",
+		"/Users/edward/go/src/github.com/afking/gocone/rocket/manifest.json",
+		"/Users/edward/go/src/github.com/afking/gocone/coreos/cloud-config.yaml",
+		"/Users/edward/go/src/github.com/afking/gocone/rocket/nginx/manifest",
+		"/Users/edward/Desktop/PLUSNET.txt",
+		"/Users/edward/go/src/github.com/afking/gocone/data/utils.go",
+		"/Users/edward/go/src/github.com/afking/cone/pkg/database/struct.go",
+		"/Users/edward/go/src/github.com/afking/gocone/cm/main.go",
+		"/Users/edward/go/src/github.com/afking/gocone/cm/routes.go",
+		"/Users/edward/go/src/github.com/afking/gocone/cm/redis.go",
+		"/Users/edward/go/src/github.com/afking/gocone/gpg-batch",
+		"/Users/edward/go/src/github.com/afking/gocone/readme.md",
+		"/Users/edward/go/src/github.com/afking/gocone/conf/conf.go",
+		"/Users/edward/go/src/github.com/afking/gocone/gocone.go",
+		"/Users/edward/go/src/github.com/afking/gocone/utils/bug.go",
+		"/Users/edward/go/src/github.com/afking/gocone/bug/bug.go",
+		"/Users/edward/go/src/github.com/afking/gocone/mail/support.tmpl",
+		"/Users/edward/go/src/github.com/afking/gocone/mail/tasks.go",
+		"/Users/edward/go/src/github.com/afking/gocone/mail/routes.go",
+		"/Users/edward/go/src/github.com/afking/gocone/mail/actions.go",
+		"/Users/edward/go/src/github.com/afking/gocone/mail/main.go",
+		"/Users/edward/go/src/github.com/afking/cone/pkg/notify/notify.go",
+		"/Users/edward/go/src/github.com/afking/cone/pkg/database/filter.go",
+		"/Users/edward/go/src/github.com/afking/cone/main.go",
+		"/Users/edward/go/src/github.com/afking/cone/pkg/geocone/locate_test.go",
+		"/Users/edward/go/src/github.com/afking/cone/geoencode.go",
+		"/Users/edward/go/src/github.com/afking/cone/pkg/openmap/openmap.go",
+		"/Users/edward/go/src/github.com/afking/cone/pkg/database/database.go",
+		"/Users/edward/go/src/github.com/afking/cone/bot/cpu/cpu.go",
+		"/Users/edward/go/src/github.com/afking/cone/bot/bot.go",
+		"/Users/edward/go/src/github.com/afking/cone/pkg/geocone/locate.go",
+		"/Users/edward/go/src/github.com/afking/cone/notifications.go",
+		"/Users/edward/go/src/github.com/afking/cone/helpers.go",
+		"/Users/edward/go/src/github.com/afking/cone/.gitignore",
+		"/Users/edward/go/src/github.com/afking/cone/bot/bot.go.txt",
+		"/Users/edward/go/src/github.com/afking/cone/auth.go",
+		"/Users/edward/go/src/github.com/afking/cone/test/bot.go",
+		"/Users/edward/go/src/github.com/afking/cone/test/test.go",
+		"/Users/edward/go/src/github.com/afking/cone/filter.go",
+		"/Users/edward/Desktop/data/datastruct.go",
+		"/Users/edward/Desktop/data/database.go",
+		"/Users/edward/go/src/github.com/afking/cone/geo.go",
+		"/Users/edward/go/src/github.com/afking/cone/pkg/data/database.go",
+		"/Users/edward/go/src/github.com/afking/cone/pkg/filter/filter.go",
+		"/Users/edward/go/src/github.com/afking/cone/notify.go",
+		"/Users/edward/go/src/github.com/afking/cone/pkg/filter/data.go",
+		"/Users/edward/go/src/github.com/afking/cone/pkg/data/datafilter.go",
+		"/Users/edward/go/src/github.com/afking/cone/pkg/openmap/openmap_test.go",
+		"/Users/edward/go/src/github.com/afking/cone/README.md",
+		"/Users/edward/go/src/github.com/afking/cone/bot/bot2.go.tex",
+		"/Users/edward/Documents/Aeronautics ICL/4th Year/AE4-404 Wing Design/cw/wingDesign.tex",
+		"/Users/edward/go/src/github.com/afking/cone/docs/cone.tex",
+		"/Users/edward/go/src/github.com/afking/cone/api.go",
+		"/Users/edward/go/src/github.com/afking/cone/pkg/social/social.go",
+		"/Users/edward/go/src/github.com/afking/cone/pkg/media/parse.go",
+		"/Users/edward/go/src/github.com/afking/cone/utils/fabfile.py",
+		"/Users/edward/go/src/github.com/afking/cone/pkg/data/datastruct.go",
+		"/Users/edward/go/src/github.com/afking/cone/pkg/media/validate.go",
+		"/Users/edward/go/src/github.com/afking/cone/pkg/geocone/node.go",
+		"/Users/edward/go/src/github.com/afking/cone/serve.go",
+		"/Users/edward/go/src/github.com/afking/cloudlys/main.go",
+		"/Users/edward/go/src/github.com/afking/cone/pkg/mapper/map.go",
+		"/Users/edward/go/src/github.com/afking/cone/pkg/map/map.go",
+		"/Users/edward/go/src/github.com/afking/cone/data/database.go",
+		"/Users/edward/go/src/github.com/afking/cone/media.go",
+		"/Users/edward/go/src/github.com/afking/cone/world.go",
+		"/Users/edward/go/src/github.com/afking/cone/data/datastruct.go",
+		"/Users/edward/go/src/github.com/afking/cone/handles.go",
+		"/Users/edward/go/src/github.com/afking/cone/api2.go",
+		"/Users/edward/go/src/github.com/afking/cone/handles",
+		"/Users/edward/go/src/github.com/afking/cone/geocone/locate_test.go",
+		"/Users/edward/go/src/github.com/afking/cone/geocone/node.go",
+		"/Users/edward/go/src/github.com/afking/cone/geocone/raycast.go",
+		"/Users/edward/go/src/github.com/afking/cone/geocone/locate.go"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"String",
+			"string",
+			"auth",
+			"multi",
+			"mul",
+			"dev",
+			"email",
+			"email ",
+			"pack",
+			"notify",
+			"action",
+			"location",
+			"ping",
+			"action",
+			"pathACtion",
+			"remAction",
+			"\"PostID",
+			"PostID",
+			"Get",
+			"GET",
+			"User",
+			"user",
+			"appdata",
+			"login",
+			"api/0.1",
+			"api/0.2",
+			"api",
+			"coneapp.com",
+			"fmt",
+			"\"Post",
+			"\"PostID\"",
+			"PostID",
+			"GetStruct",
+			"int64",
+			"int65",
+			"int64",
+			"summon",
+			"action",
+			"actions",
+			"reqtype",
+			"comment",
+			"fmt.Println(\"SUP\")",
+			"actionTap",
+			"Do",
+			"query",
+			"client",
+			"SRC",
+			"image",
+			"coneapp",
+			"UserToken",
+			"Token",
+			"ServiceToken",
+			"agent",
+			"s.db",
+			"0.1/",
+			"coneapp.com",
+			"openmap",
+			"setcomment",
+			"DataBase",
+			"*User",
+			"post",
+			"CommentIDs",
+			"after",
+			"After",
+			"DataBase",
+			"false, ",
+			"pathAction(",
+			"DataBase",
+			"post",
+			"Post",
+			"DataBase",
+			"CommentN",
+			"DataBase",
+			"expiration",
+			"Actions",
+			"ctions",
+			"Actions",
+			"UserID",
+			" ",
+			"USER,",
+			"USER",
+			"Token",
+			"ket",
+			"Actions",
+			"ctions",
+			"Actions",
+			"\"Post\"",
+			"c.do(\"EXEC\")",
+			"nil",
+			"added",
+			"PostID",
+			"DataBase",
+			"int64",
+			".html",
+			"Itoa(",
+			"String",
+			"post.",
+			"*Post",
+			"maxImageSize",
+			"int64",
+			"Int64",
+			"int64",
+			"Int64",
+			"int64",
+			"1",
+			"int64",
+			"bool",
+			"true",
+			"DataBase",
+			"string",
+			"db.expr",
+			"defer close(c)",
+			".pool.",
+			"(db *DataBase)",
+			"bug",
+			"hello-layout",
+			"$ ",
+			"register",
+			"comment",
+			"locationHealth",
+			"comment",
+			"heart",
+			"haert",
+			"posts",
+			"register",
+			"\"no",
+			"pref",
+			"getUserLocations"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "conf/airframes/lisa.xml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2647,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2312,
+								2312
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 626.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.9o:///Users/edward/go/src/cloudlys":
+	{
+		"height": 118.0
+	},
+	"output.9o:///Users/edward/go/src/github.com/afking/cone/geocone":
+	{
+		"height": 118.0
+	},
+	"output.9o:///Users/edward/go/src/github.com/afking/crazyflie/gocf":
+	{
+		"height": 118.0
+	},
+	"output.9o:///Users/edward/go/src/github.com/afking/gocone/db":
+	{
+		"height": 118.0
+	},
+	"output.9o:///Users/edward/go/src/gowadafede":
+	{
+		"height": 112.0
+	},
+	"output.GoSublime-main-output":
+	{
+		"height": 112.0
+	},
+	"output.MarGo-output":
+	{
+		"height": 112.0
+	},
+	"output.exec":
+	{
+		"height": 112.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 118.0
+	},
+	"pinned_build_system": "",
+	"project": "lisa.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 226.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
