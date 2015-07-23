@@ -523,7 +523,7 @@
 			"file": "conf/airframes/lisa.xml",
 			"settings":
 			{
-				"buffer_size": 2647,
+				"buffer_size": 5951,
 				"line_ending": "Unix"
 			}
 		}
@@ -592,6 +592,13 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/Users/edward/c/lisa",
+		"/Users/edward/c/lisa/conf",
+		"/Users/edward/c/lisa/conf/airframes",
+		"/Users/edward/c/lisa/conf/airframes/examples"
+	],
 	"file_history":
 	[
 		"/Users/edward/go/src/github.com/afking/gocone/web/web.go",
@@ -893,15 +900,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2647,
+						"buffer_size": 5951,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2312,
-								2312
+								535,
+								535
 							]
 						],
 						"settings":
@@ -909,7 +916,7 @@
 							"syntax": "Packages/XML/XML.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 626.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
