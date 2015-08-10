@@ -1,6 +1,69 @@
 <!-- Lisa -->
 <!DOCTYPE airframe SYSTEM "airframe.dtd">
 <airframe name="lisa">
+	<firmware name="fixedwing">
+		<target name="ap" board="lisa_s_1.0">
+			<subsystem name="radio_control" type="superbitrf_rc">
+				<!-- To store the binding parameters for the superbit radio in your
+				     airframe file uncomment the following three lines and set the
+				     correct values based on the output of the superbitrf telemetry
+				     messages. -->
+				<!--define name="RADIO_TRANSMITTER_ID" value="1335259868"/--><!-- Esden (1BitSquared) Dx6i: TX 1 -->
+				<!--define name="RADIO_TRANSMITTER_CHAN" value="6"/-->
+				<!--define name="RADIO_TRANSMITTER_PROTOCOL" value="0x01"/-->
+				<define name="USE_PERSISTENT_SETTINGS" value="TRUE"/>
+			</subsystem>
+
+			<configure name="PERIODIC_FREQUENCY" value="120"/>
+			<configure name="AHRS_PROPAGATE_FREQUENCY" value="100"/><!-- 500 on QUAD -->
+			<configure name="AHRS_CORRECT_FREQUENCY" value="100"/>
+		</target>
+
+		<configure name="USE_MAGNETOMETER" value="FALSE"/>
+
+		<define name="AGR_CLIMB"/>
+		<define name="LOITER_TRIM"/>
+		<define name="STRONG_WIND"/>
+
+		<subsystem name="actuators" type="pwm">
+			<define name="SERVO_HZ" value="400"/>
+			<define name="USE_SERVOS_1AND2"/>
+		</subsystem>
+
+		<subsystem name="telemetry" type="superbitrf"/>
+		<subsystem name="imu" type="lisa_s_v1.0"/>
+		<subsystem name="gps" type="ublox"/>
+		<subsystem name="ahrs" type="int_cmpl_quat"/>
+		<subsystem name="ins" type="gps_passthrough"/>
+		 <subsystem name="control"/>
+		 <subsystem name="navigation"/>
+
+	</firmware>
+
+	<modules main_freq="512">
+		<!--<load name="sys_mon.xml"/>
+		<load name="baro_sim.xml"/>
+		<load name="air_data.xml">
+		  <define name="AIR_DATA_CALC_AMSL_BARO" value="TRUE"/>
+		</load>!-->
+
+		<load name="gps_ubx_ucenter.xml"/>
+		<load name="send_imu_mag_current.xml"/> 
+
+		<!-- extra navigation routines --> <!--
+		<load name="nav_bungee_takeoff.xml"/>
+		<load name="nav_line.xml"/>
+		<load name="nav_line_border.xml"/>
+		<load name="nav_line_osam.xml"/>
+		<load name="nav_flower.xml"/>
+		<load name="nav_smooth.xml"/>
+		<load name="nav_survey_polygon.xml"/>
+		<load name="nav_survey_poly_osam.xml"/>
+		<load name="nav_survey_zamboni.xml"/>
+		<load name="nav_vertical_raster.xml"/>
+		<load name="nav_spiral.xml"/> !-->
+	</modules>
+
 	<servos>
 		<servo name="MOTOR"         no="0" min="1290" neutral="1290" max="1810"/>
 		<servo name="AILEVON_LEFT"  no="1" min="2000" neutral="1510" max="1000"/>
@@ -11,7 +74,7 @@
 		<axis name="THROTTLE" failsafe_value="0"/>
 		<axis name="ROLL"     failsafe_value="0"/>
 		<axis name="PITCH"    failsafe_value="0"/>
-		<axis name="SHUTTER"    failsafe_value="0"/>
+		<axis name="SHUTTER"  failsafe_value="0"/>
 	</commands>
 
 	<rc_commands>
@@ -19,14 +82,12 @@
 		<set command="ROLL"     value="@ROLL"/>
 		<set command="PITCH"    value="@PITCH"/>
 	</rc_commands>
-
-	<!-- TODO: ?? -->
+	
 	<section name="MIXER">
 		<define name="AILEVON_AILERON_RATE" value="0.75"/>
 		<define name="AILEVON_ELEVATOR_RATE" value="0.75"/>
 	</section>
 
-	<!-- TODO: ?? -->
 	<command_laws>
 		<let var="aileron"  value="@ROLL  * AILEVON_AILERON_RATE"/>
 		<let var="elevator" value="@PITCH * AILEVON_ELEVATOR_RATE"/>
@@ -36,8 +97,8 @@
 	</command_laws>
 
 	<section name="AUTO1" prefix="AUTO1_">
-		<define name="MAX_ROLL" value="0.7"/>
-		<define name="MAX_PITCH" value="0.6"/>
+		<define name="MAX_ROLL" value="40." unit="deg"/>
+		<define name="MAX_PITCH" value="35." unit="deg"/>
 	</section>
 
 	<section name="IMU" prefix="IMU_">
@@ -63,24 +124,11 @@
 		<define name="MAG_Z_CURRENT_COEF" value="-0.01935617335"/>
 	</section>
 
-	<!-- TODO: Configure ?? -->
-	<section name="BAT">
-		<define name="MILLIAMP_AT_FULL_THROTTLE" value="14000"/>
-		<define name="CATASTROPHIC_BAT_LEVEL" value="4.0" unit="V"/>
-		<define name="CRITIC_BAT_LEVEL" value="4.4" unit="V"/>
-		<define name="LOW_BAT_LEVEL" value="4.5" unit="V"/>
-		<define name="MAX_BAT_LEVEL" value="4.8" unit="V"/>
+	<section name="INS" prefix="INS_">
+		<define name="ROLL_NEUTRAL_DEFAULT" value="0" unit="deg"/>
+		<define name="PITCH_NEUTRAL_DEFAULT" value="0" unit="deg"/>
 	</section>
 
-	<!-- TODO: Configure ?? -->
-	  <section name="MISC">
-		<define name="NOMINAL_AIRSPEED" value="13." unit="m/s"/>
-		<define name="CARROT" value="5." unit="s"/>
-		<define name="KILL_MODE_DISTANCE" value="(1.5*MAX_DIST_FROM_HOME)"/>
-		<define name="DEFAULT_CIRCLE_RADIUS" value="80."/>
-	</section>
-
-	<!-- TODO: ?? -->
 	<section name="VERTICAL CONTROL" prefix="V_CTL_">
 		<define name="POWER_CTL_BAT_NOMINAL" value="11.1" unit="volt"/>
 		<!-- outer loop proportional gain -->
@@ -102,14 +150,13 @@
 		<define name="THROTTLE_SLEW_LIMITER" value="2" unit="s"/>
 	</section>
 
-	<!-- TODO: ?? -->
 	<section name="HORIZONTAL CONTROL" prefix="H_CTL_">
 		<define name="COURSE_PGAIN" value="1.0"/>
 		<define name="COURSE_DGAIN" value="0.3"/>
 
-		<define name="ROLL_MAX_SETPOINT" value="0.6" unit="rad"/>
-		<define name="PITCH_MAX_SETPOINT" value="0.5" unit="rad"/>
-		<define name="PITCH_MIN_SETPOINT" value="-0.5" unit="rad"/>
+		<define name="ROLL_MAX_SETPOINT"  value="35"  unit="deg"/>
+		<define name="PITCH_MAX_SETPOINT" value="30"  unit="deg"/>
+		<define name="PITCH_MIN_SETPOINT" value="-30" unit="deg"/>
 
 		<define name="PITCH_PGAIN" value="12000."/>
 		<define name="PITCH_DGAIN" value="1.5"/>
@@ -122,41 +169,51 @@
 		<define name="ROLL_RATE_GAIN" value="1500"/>
 	</section>
 
-	<firmware name="fixedwing">
-		<target name="ap" board="lisa_s_1.0">
-			<subsystem name="radio_control" type="superbitrf_rc">
-			<!-- To store the binding parameters for the superbit radio in your
-			     airframe file uncomment the following three lines and set the
-			     correct values based on the output of the superbitrf telemetry
-			     messages. -->
-			<!--define name="RADIO_TRANSMITTER_ID" value="1335259868"/--> <!-- Esden (1BitSquared) Dx6i: TX 1 -->
-			<!--define name="RADIO_TRANSMITTER_CHAN" value="6"/-->
-			<!--define name="RADIO_TRANSMITTER_PROTOCOL" value="0x01"/-->
-			<define name="USE_PERSISTENT_SETTINGS" value="TRUE"/>
-			</subsystem>
+	<section name="AGGRESSIVE" prefix="AGR_">
+		<define name="BLEND_START" value="20"/><!-- Altitude Error to Initiate Aggressive Climb CANNOT BE ZERO!!-->
+		<define name="BLEND_END" value="10"/><!-- Altitude Error to Blend Aggressive to Regular Climb Modes  CANNOT BE ZERO!!-->
+		<define name="CLIMB_THROTTLE" value="1.00"/><!-- Gaz for Aggressive Climb -->
+		<define name="CLIMB_PITCH" value="0.3"/><!-- Pitch for Aggressive Climb -->
+		<define name="DESCENT_THROTTLE" value="0.1"/><!-- Gaz for Aggressive Decent -->
+		<define name="DESCENT_PITCH" value="-0.25"/><!-- Pitch for Aggressive Decent -->
+		<define name="CLIMB_NAV_RATIO" value="0.8"/><!-- Percent Navigation for Altitude Error Equal to Start Altitude -->
+		<define name="DESCENT_NAV_RATIO" value="1.0"/>
+	</section>
 
-			<configure name="AHRS_PROPAGATE_FREQUENCY" value="500"/>
-		</target>
+	<section name="FAILSAFE" prefix="FAILSAFE_">
+		<define name="DELAY_WITHOUT_GPS" value="2" unit="s"/>
+		<define name="DEFAULT_THROTTLE" value="0.3" unit="%"/>
+		<define name="DEFAULT_ROLL" value="0.3" unit="rad"/>
+		<define name="DEFAULT_PITCH" value="0.5" unit="rad"/>
+	</section>
 
-		<!-- TODO: ??
-		<target name="nps" board="pc">
-			<subsystem name="fdm" type="jsbsim"/>
-			<subsystem name="radio_control" type="ppm"/>
-		</target>
-		-->
+	
+	
+	<section name="BAT">
+		<define name="MILLIAMP_AT_FULL_THROTTLE" value="14000"/>
+		<define name="CATASTROPHIC_BAT_LEVEL" value="3.0" unit="V"/>
+		<define name="CRITIC_BAT_LEVEL" value="3.3" unit="V"/>
+		<define name="LOW_BAT_LEVEL" value="3.5" unit="V"/>
+		<define name="MAX_BAT_LEVEL" value="4.1" unit="V"/>
+	</section>
+	
+	<section name="MISC">
+		<define name="NOMINAL_AIRSPEED" value="13." unit="m/s"/>
+		<define name="CARROT" value="5." unit="s"/>
+		<define name="KILL_MODE_DISTANCE" value="(1.5*MAX_DIST_FROM_HOME)"/>
+		<define name="CONTROL_FREQUENCY" value="60" unit="Hz"/>
+		<define name="DEFAULT_CIRCLE_RADIUS" value="80."/>
+	</section>
 
-		<subsystem name="motor_mixing"/>
-		<subsystem name="actuators" type="pwm">
-			<define name="SERVO_HZ" value="400"/>
-			<define name="USE_SERVOS_1AND2"/>
-		</subsystem>
+	<!--<section name="AUTOPILOT">
+		<define name="MODE_STARTUP" value="AP_MODE_NAV"/>
+		<define name="MODE_MANUAL" value="AP_MODE_ATTITUDE_DIRECT"/>
+		<define name="MODE_AUTO1" value="AP_MODE_ATTITUDE_DIRECT"/>
+		<define name="MODE_AUTO2" value="AP_MODE_NAV"/>
+	</section>!-->
 
-		<subsystem name="telemetry" type="superbitrf"/>
-		<subsystem name="imu" type="lisa_s_v1.0"/>
-		<subsystem name="gps" type="ublox"/>
-		<!--<subsystem name="stabilization" type="int_quat"/>-->
-		<!--<subsystem name="ahrs" type="int_cmpl_quat"/>-->
-		<subsystem name="navigation"/>
-		<subsystem name="ins" type="alt_float"/>
-		</firmware>
+	<section name="NAV">
+		<define name="NAV_GLIDE_PITCH_TRIM" value="0"/>
+	</section>
+
 </airframe>
