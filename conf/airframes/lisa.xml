@@ -144,6 +144,12 @@
 			<subsystem name="radio_control" type="ppm"/>
 		</target>
 		-->
+		<subsystem name="radio_control"     type="superbitrf_rc">
+			<define name="RADIO_TRANSMITTER_ID" value="2008496626"/>
+			<define name="RADIO_TRANSMITTER_CHAN" value="6"/>
+			<define name="RADIO_TRANSMITTER_PROTOCOL" value="0x01"/>
+			<define name="RADIO_KILL_SWITCH" value="RADIO_FLAP"/>
+		</subsystem>
 
 		<subsystem name="motor_mixing"/>
 		<subsystem name="actuators" type="pwm">
