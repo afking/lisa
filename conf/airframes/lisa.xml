@@ -35,8 +35,15 @@
 		<subsystem name="gps" type="ublox"/>
 		<subsystem name="ahrs" type="int_cmpl_quat"/>
 		<subsystem name="ins" type="gps_passthrough"/>
-		 <subsystem name="control"/>
-		 <subsystem name="navigation"/>
+		<subsystem name="control"/>
+		<subsystem name="navigation"/>
+
+		<subsystem name="radio_control"     type="superbitrf_rc">
+			<define name="RADIO_TRANSMITTER_ID" value="2008496626"/>
+			<define name="RADIO_TRANSMITTER_CHAN" value="6"/>
+			<define name="RADIO_TRANSMITTER_PROTOCOL" value="0x01"/>
+			<define name="RADIO_KILL_SWITCH" value="RADIO_FLAP"/>
+		</subsystem>
 
 	</firmware>
 
@@ -186,9 +193,6 @@
 		<define name="DEFAULT_ROLL" value="0.3" unit="rad"/>
 		<define name="DEFAULT_PITCH" value="0.5" unit="rad"/>
 	</section>
-
-<<<<<<< HEAD
-	
 	
 	<section name="BAT">
 		<define name="MILLIAMP_AT_FULL_THROTTLE" value="14000"/>
@@ -205,20 +209,6 @@
 		<define name="CONTROL_FREQUENCY" value="60" unit="Hz"/>
 		<define name="DEFAULT_CIRCLE_RADIUS" value="80."/>
 	</section>
-=======
-		<!-- TODO: ??
-		<target name="nps" board="pc">
-			<subsystem name="fdm" type="jsbsim"/>
-			<subsystem name="radio_control" type="ppm"/>
-		</target>
-		-->
-		<subsystem name="radio_control"     type="superbitrf_rc">
-			<define name="RADIO_TRANSMITTER_ID" value="2008496626"/>
-			<define name="RADIO_TRANSMITTER_CHAN" value="6"/>
-			<define name="RADIO_TRANSMITTER_PROTOCOL" value="0x01"/>
-			<define name="RADIO_KILL_SWITCH" value="RADIO_FLAP"/>
-		</subsystem>
->>>>>>> 7b25b5cdb77a8dc968af3030d3e0ad7f32a56efb
 
 	<!--<section name="AUTOPILOT">
 		<define name="MODE_STARTUP" value="AP_MODE_NAV"/>
